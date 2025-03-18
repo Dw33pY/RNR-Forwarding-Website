@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RNR Forwarding Limited - Services</title>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Services Section Background */
+        .services-section {
+            background-color: #f8f9fa;
+            padding: 60px 0;
+        }
+
+        /* Service Cards */
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Service Icons */
+        .service-icon {
+            font-size: 3rem;
+            color: #004080;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.2);
+            color: #007bff;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background-color: #004080;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .cta-section a {
+            margin-top: 15px;
+        }
+
+        /* Footer Enhancements */
+        .footer-social i {
+            font-size: 20px;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-social i:hover {
+            color: #007bff;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #004080;">
+            <div class="logo">
+                <a href="index.html"><img src="assets/img/logo.png" alt="RNR Logo"></a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#" class="cta">Get a Quote</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <h1 class="text-center mb-4">Our Services</h1>
+            <p class="text-center mb-5">At RNR Forwarding Limited, we offer a range of services designed to meet all of your logistics and freight forwarding needs.</p>
+
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="service-card text-center">
+                        <i class="fa-solid fa-truck service-icon mb-3"></i>
+                        <h3>Freight Forwarding</h3>
+                        <p>We provide efficient and reliable cargo transportation services to ensure your goods reach their destination safely and on time.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="service-card text-center">
+                        <i class="fa-solid fa-warehouse service-icon mb-3"></i>
+                        <h3>Warehousing</h3>
+                        <p>Our secure and spacious storage solutions offer a safe environment for your goods, with modern facilities and inventory management systems.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="service-card text-center">
+                        <i class="fa-solid fa-ship service-icon mb-3"></i>
+                        <h3>Cargo Tracking</h3>
+                        <p>Stay informed with our cargo tracking service, offering real-time updates and transparent visibility on the status of your shipments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Get Started?</h2>
+            <p>Contact us today for a free quote and experience seamless logistics solutions.</p>
+            <a href="contact.html" class="btn btn-light btn-lg">Get a Quote</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-3 text-center">
+        <div class="container">
+            <p>© 2024 RNR Forwarding Limited. All Rights Reserved.</p>
+            <div class="footer-social mt-2">
+                <a href="#"><i class="fa-brands fa-facebook text-white"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter text-white"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin text-white"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

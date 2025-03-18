@@ -1,0 +1,394 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;  /* Ensure Roboto font is used */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4; /* Light background */
+    animation: fadeInBackground 1s ease-in-out; /* Background fade-in effect */
+}
+
+/* Header Section */
+header {
+    background-color: #004080; /* Dark background */
+    color: #fff; /* White text */
+    padding: 1rem 0;
+    z-index: 1000; /* Ensure it's on top of other content */
+    animation: slideInDown 0.5s ease-in-out; /* Animation for header */
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem; /* Padding around navbar */
+    background-color: #004080; /* Dark background */
+    animation: fadeIn 1s ease-in-out; /* Fade-in effect for navbar */
+}
+
+/* Logo Image */
+.logo img {
+    width: 250px;  /* Adjust the logo size */
+    height: auto;
+    transition: transform 0.3s ease; /* Add transform effect for logo */
+}
+
+.logo img:hover {
+    transform: scale(1.1); /* Slightly enlarge logo on hover */
+}
+
+/* Nav container: flexbox for spacing between logo and links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin-left: auto; /* Push the nav links to the right */
+    margin-right: 2rem;  /* Space from the right edge */
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation for nav links */
+}
+
+/* Navbar links styling */
+.nav-links li a {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transitions */
+    font-size: 1.1rem;
+    text-decoration: none; /* Remove underline */
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+/* Hover effect for links */
+.nav-links li a:hover,
+.nav-links li a:focus {
+    background-color: #007bff;
+    transform: scale(1.5) translateY(-3px); /* Hover effect for links with scaling */
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3); /* Subtle shadow on hover */
+}
+
+
+/* Adjust the last link (Get a Quote) */
+.nav-links li:last-child a {
+    margin-left: 1.5rem; /* Space between last link and others */
+}
+
+/* Toggle button styling */
+.navbar-toggler {
+    margin-right: 2rem; /* Space from the right edge */
+    transition: transform 0.3s ease; /* Add transition for toggler */
+}
+
+.navbar-toggler:hover {
+    transform: rotate(90deg); /* Add rotate effect for toggler */
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('assets/img/hero-background.jpg'); /* Your image path here */
+    background-size: cover; /* Ensure the image covers the whole section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    padding: 6rem 0; /* Adjust the padding to ensure the content isn't too close to the top or bottom */
+    color: #fff; /* White text for readability */
+    position: relative; /* To layer content over the background */
+    text-align: center; /* Center the text */
+}
+
+/* Optional: Add overlay for better text contrast */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1; /* Ensure overlay is above the background but below the content */
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2; /* Ensure content is above the overlay */
+}
+
+
+/* CTA Button */
+.cta {
+    background-color: #ff5733;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transition */
+}
+
+.cta:hover {
+    background-color: #ff704d;
+    transform: scale(1.05); /* Slightly enlarge the CTA button */
+    box-shadow: 0 4px 8px rgba(255, 87, 51, 0.3); /* Subtle shadow for the CTA */
+}
+
+/* Card Hover Effect */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for card hover */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Enlarge card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Animations */
+
+/* Slide-in from top */
+@keyframes slideInDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Fade-in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Fade-in background */
+@keyframes fadeInBackground {
+    0% {
+        background-color: #f4f4f4;
+    }
+    100% {
+        background-color: #ffffff;
+    }
+}
+
+/* About Preview Card Styles */
+.about-preview-card .about-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    padding: 2rem;
+}
+
+.about-card .card-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #004080;
+    margin-bottom: 1rem;
+}
+
+.about-card .card-text {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.about-card .btn-outline-primary {
+    border: 2px solid #004080;
+    color: #004080;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.about-card .btn-outline-primary:hover {
+    background-color: #004080;
+    color: #fff;
+}
+
+.about-preview-card .about-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Service Cards Styling */
+.service-item {
+    margin-top: 1rem;
+    background-color: #fff; /* White background */
+    border-radius: 15px; /* Rounded corners for a smoother look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    padding: 1.5rem; /* Space within the card */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space out the elements */
+    text-align: center; /* Center align text */
+    height: 100%; /* Ensure card takes full height */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Add smooth transitions */
+}
+
+/* Service Title Styling */
+.service-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem; /* Space below the title */
+    color: #333; /* Dark color for title */
+}
+
+/* Service Description Styling */
+.service-description {
+    flex-grow: 1; /* Take up remaining space */
+    font-size: 1rem;
+    color: #666; /* Slightly lighter color for description */
+    line-height: 1.5;
+    margin-bottom: 1rem; /* Space at the bottom of description */
+}
+
+/* Service Cards Hover Effect */
+.service-item:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    background-color: #f1f1f1; /* Change background color on hover */
+}
+
+/* Media Queries for Service Cards Responsiveness */
+@media (max-width: 768px) {
+    .service-item {
+        padding: 1rem; /* Reduce padding on smaller screens */
+    }
+
+    .service-item .service-title {
+        font-size: 1.1rem; /* Adjust title size for smaller screens */
+    }
+
+    .service-item .service-description {
+        font-size: 0.95rem; /* Adjust description font size */
+    }
+}
+
+
+/* Media Queries for Responsiveness */
+
+/* Mobile (smaller screens, up to 576px) */
+@media (max-width: 576px) {
+    .logo img {
+        width: 180px; /* Reduce logo size for smaller screens */
+    }
+
+    .nav-links {
+        display: none; /* Hide nav links on mobile by default */
+        flex-direction: column;
+        width: 100%;
+        background-color: #004080;
+        position: absolute;
+        top: 70px; /* Positioning it below the navbar */
+        left: 0;
+        padding: 1rem 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show nav links when toggled */
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .nav-links li a {
+        font-size: 1.2rem; /* Larger text on mobile */
+    }
+
+    /* Button to toggle navbar on mobile */
+    .navbar-toggler {
+        display: block;
+    }
+}
+
+/* Tablet (576px to 768px) */
+@media (min-width: 576px) and (max-width: 768px) {
+    .logo img {
+        width: 220px; /* Adjust logo size for tablets */
+    }
+
+    .nav-links {
+        display: flex;
+    }
+
+    .nav-links li a {
+        font-size: 1.2rem; /* Adjust text size for tablets */
+    }
+
+    .cta {
+        font-size: 1rem;
+    }
+}
+
+/* Laptop (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .logo img {
+        width: 230px; /* Adjust logo size for laptops */
+    }
+
+    .nav-links li a {
+        font-size: 1.1rem; /* Slightly larger text for laptops */
+    }
+}
+
+/* Desktop (1024px and above) */
+@media (min-width: 1024px) {
+    .nav-links li a {
+        font-size: 1.1rem;
+    }
+
+    .cta {
+        font-size: 1.1rem;
+    }
+}
+
+/* Contact Section Card Styling */
+.contact-card {
+    background-color: #fff; /* White background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    padding: 1.5rem; /* Inner spacing */
+}
+
+.contact-card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    background-color: #f1f1f1; /* Light gray background on hover */
+}
+
+.contact-card i {
+    color: #004080; /* Icon color */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth icon transitions */
+}
+
+.contact-card:hover i {
+    color: #007bff; /* Icon color on hover */
+    transform: scale(1.2); /* Slightly enlarge icon on hover */
+}
+
+.contact-card .card-title {
+    font-size: 1.3rem; /* Title size */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem; /* Space below the title */
+}
+
+.contact-card .card-text {
+    font-size: 1rem; /* Text size */
+    color: #666; /* Gray color for text */
+    line-height: 1.5;
+}
