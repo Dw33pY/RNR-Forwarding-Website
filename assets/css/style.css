@@ -11,10 +11,14 @@ body {
 
 /* Header Section */
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: #004080; /* Dark background */
     color: #fff; /* White text */
     padding: 1rem 0;
-    z-index: 1000; /* Ensure it's on top of other content */
+    z-index: 1001; /* Ensure it's on top of other content */
     animation: slideInDown 0.5s ease-in-out; /* Animation for header */
 }
 
@@ -48,6 +52,16 @@ header {
     margin-right: 2rem;  /* Space from the right edge */
     animation: fadeIn 1s ease-in-out; /* Fade-in animation for nav links */
 }
+
+/* Ensure "Get a Quote" button is inline on larger screens */
+.nav-links li:last-child a {
+    display: inline-block; /* Ensures it behaves like a normal button */
+    white-space: nowrap; /* Prevents wrapping */
+    padding: 0.5rem 1rem; /* Adjust padding */
+    font-size: 1.1rem; /* Match other nav links */
+    text-align: center; /* Center text */
+}
+
 
 /* Navbar links styling */
 .nav-links li a {
@@ -97,6 +111,7 @@ header {
     color: #fff; /* White text for readability */
     position: relative; /* To layer content over the background */
     text-align: center; /* Center the text */
+    margin-top: 180px;
 }
 
 /* Optional: Add overlay for better text contrast */
@@ -279,24 +294,23 @@ header {
 
 /* Mobile (smaller screens, up to 576px) */
 @media (max-width: 576px) {
-    .logo img {
-        width: 180px; /* Reduce logo size for smaller screens */
-    }
-
     .nav-links {
-        display: none; /* Hide nav links on mobile by default */
+        display: none; /* Hide by default */
         flex-direction: column;
         width: 100%;
         background-color: #004080;
         position: absolute;
-        top: 70px; /* Positioning it below the navbar */
+        top: 100%; /* This moves the menu BELOW the logo */
         left: 0;
         padding: 1rem 0;
+        z-index: 1000;
     }
 
     .nav-links.active {
-        display: flex; /* Show nav links when toggled */
+        display: flex; /* Show when active */
     }
+}
+
 
     .nav-links li {
         text-align: center;
@@ -312,7 +326,7 @@ header {
     .navbar-toggler {
         display: block;
     }
-}
+
 
 /* Tablet (576px to 768px) */
 @media (min-width: 576px) and (max-width: 768px) {
@@ -391,4 +405,16 @@ header {
     font-size: 1rem; /* Text size */
     color: #666; /* Gray color for text */
     line-height: 1.5;
+}
+
+.about-section{
+    margin-top: 180px;
+}
+
+.services-section{
+    margin-top: 180px;
+}
+
+.contact-section{
+    margin-top: 180px;
 }
